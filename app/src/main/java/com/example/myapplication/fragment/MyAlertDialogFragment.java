@@ -13,13 +13,13 @@ import android.support.v4.app.DialogFragment;
 
 public class MyAlertDialogFragment extends DialogFragment {
 
-    private DialogInterface.OnClickListener mPositiveButtonClickListener;
+    private DialogInterface.OnClickListener mDialogButtonClickListener;
 
     public static MyAlertDialogFragment newInstance(DialogInterface.OnClickListener listener) {
         Bundle args = new Bundle();
         MyAlertDialogFragment fragment = new MyAlertDialogFragment();
         fragment.setArguments(args);
-        fragment.setPositiveButtonClickListener(listener);
+        fragment.setDailogButtonClickListener(listener);
         return fragment;
     }
 
@@ -30,12 +30,12 @@ public class MyAlertDialogFragment extends DialogFragment {
         builder.setTitle("삭제");
         builder.setMessage("정말 삭제 하시겠습니까?");
         builder.setCancelable(false);
-        builder.setPositiveButton("예", mPositiveButtonClickListener);
+        builder.setPositiveButton("예", mDialogButtonClickListener);
         builder.setNegativeButton("아니오", null);
         return builder.create();
     }
 
-    public void setPositiveButtonClickListener(DialogInterface.OnClickListener listener) {
-        mPositiveButtonClickListener = listener;
+    public void setDailogButtonClickListener(DialogInterface.OnClickListener listener) {
+        mDialogButtonClickListener = listener;
     }
 }
