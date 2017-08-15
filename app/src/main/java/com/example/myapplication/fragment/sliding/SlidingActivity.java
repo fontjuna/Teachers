@@ -1,6 +1,7 @@
 package com.example.myapplication.fragment.sliding;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -21,9 +22,14 @@ public class SlidingActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding);
 
+        // 뷰페이저
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+
+        //탭달기
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
