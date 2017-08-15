@@ -22,13 +22,14 @@ public class SlidingActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding);
 
+        //탭달기
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+
         // 뷰페이저
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
 
-        //탭달기
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+        viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -52,7 +53,7 @@ public class SlidingActivity extends AppCompatActivity
 
         @Override
         public Fragment getItem(int position) {
-            switch (position){
+            switch (position) {
                 case 0:
                     return new BasketScoreFragment();
                 case 1:
@@ -67,5 +68,18 @@ public class SlidingActivity extends AppCompatActivity
         public int getCount() {
             return PAGE_NUM;
         }
+
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "농구";
+                case 1:
+                    return "컬러";
+                case 2:
+                    return "채팅";
+            }
+            return "등등등";
+        }
     }
+
 }
