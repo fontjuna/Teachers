@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.fragment.MyAlertDialogFragment;
 import com.example.myapplication.util.SharePreferenceUtil;
 
 import java.util.ArrayList;
@@ -187,22 +188,8 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
     }
 
     private void showDefaultDialog(final AdapterView.AdapterContextMenuInfo info) {
-//        MyAlertDialogFragment fragment = MyAlertDialogFragment.newInstance(new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                switch (which) {
-//                    case DialogInterface.BUTTON_POSITIVE:
-//                        // 삭제
-//                        mPeopleData.remove(info.position);
-//                        // 업데이트
-//                        mAdapter.notifyDataSetChanged();
-//                        break;
-//                    case DialogInterface.BUTTON_NEGATIVE:
-//                        break;
-//                }
-//            }
-//        });
-//        fragment.show(getSupportFragmentManager(), "alert");
+        MyAlertDialogFragment fragment = new MyAlertDialogFragment();
+        fragment.show(getSupportFragmentManager(), "alert");
     }
 
     @Override
