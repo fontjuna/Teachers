@@ -33,6 +33,7 @@ public class SlidingActivity extends AppCompatActivity implements BasketScoreFra
         // 최소 유지 페이지 수
 //        viewPager.setOffscreenPageLimit(10);
 
+
         tabLayout.setupWithViewPager(viewPager);
     }
 
