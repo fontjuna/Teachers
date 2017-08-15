@@ -188,7 +188,20 @@ public class AdapterViewExamActivity extends AppCompatActivity implements Dialog
     }
 
     private void showDefaultDialog(final AdapterView.AdapterContextMenuInfo info) {
-        MyAlertDialogFragment fragment = new MyAlertDialogFragment();
+        MyAlertDialogFragment fragment = MyAlertDialogFragment
+                .newInstance(new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        mPeopleData.remove(info.position);
+                        mAdapter.notifyDataSetChanged();
+                        break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+        });
         fragment.show(getSupportFragmentManager(), "alert");
     }
 
