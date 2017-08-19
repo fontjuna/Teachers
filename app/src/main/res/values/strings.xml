@@ -8,6 +8,6 @@
     <string name="cream">cream</string>
     <string name="quantity">quantity</string>
     <string name="price">Price</string>
-    <string name="result_price">$ %1$d</string>
+    <string name="result_price">$ %1$s</string>
     <string name="order">order</string>
 </resources>
