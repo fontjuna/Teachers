@@ -12,6 +12,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.example.myapplication.adapterview.AdapterViewExamActivity;
+import com.example.myapplication.flexibleUI.NewsActivity;
 import com.example.myapplication.fragment.color.ColorActivity;
 import com.example.myapplication.fragment.exam.CallbackExamActivity;
 import com.example.myapplication.fragment.exam.ColorExamActivity;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         addItem("과제 : 컬러 프래그먼트", "프래그먼트 추가, 제거", ColorExamActivity.class);
         addItem("과제 : 콜백", "액티비티와 프래그먼트 통신", CallbackExamActivity.class);
         addItem("좌우로 슬라이딩", "ViewPager", SlidingActivity.class);
+        addItem("유연한 UI구성", "ListFragment, 리소스 분기", NewsActivity.class);
 
         // 순서 뒤집기
         Collections.reverse(mDataList);
