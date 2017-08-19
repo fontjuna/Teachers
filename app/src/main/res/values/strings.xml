@@ -2,5 +2,12 @@
     <string name="app_name">My Application</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="buyer">buyer</string>
+    <string name="toppings">toppings</string>
+    <string name="cream">cream</string>
+    <string name="quantity">quantity</string>
+    <string name="price">Price</string>
+    <string name="result_price">$ %1$d</string>
+    <string name="order">order</string>
 </resources>
