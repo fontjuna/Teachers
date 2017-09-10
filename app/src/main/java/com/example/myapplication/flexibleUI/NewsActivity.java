@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.myapplication.R;
 
-public class NewsActivity extends AppCompatActivity implements FragmentA.OnHeadlineClickListener {
+public class NewsActivity extends AppCompatActivity implements HeadlinesFragment.OnHeadlineClickListener {
 
     private FragmentB mFragmentB;
 
@@ -30,11 +30,6 @@ public class NewsActivity extends AppCompatActivity implements FragmentA.OnHeadl
             mFragmentB = (FragmentB) getSupportFragmentManager()
                     .findFragmentById(R.id.frag_b);
 
-            if (savedInstanceState != null) {
-                // 복원
-                int position = savedInstanceState.getInt("position");
-                mFragmentB.updateArticleView(position);
-            }
         }
     }
 
@@ -52,12 +47,4 @@ public class NewsActivity extends AppCompatActivity implements FragmentA.OnHeadl
         }
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-        if (mFragmentB != null) {
-            outState.putInt("position", mFragmentB.getCurrentPosition());
-        }
-    }
 }
