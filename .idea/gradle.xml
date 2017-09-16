@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dbrealmexam" />
+            <option value="$PROJECT_DIR$/jasonparsing" />
+            <option value="$PROJECT_DIR$/weather" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

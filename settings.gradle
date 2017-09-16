@@ -1,1 +1,1 @@
-include ':app', ':dbrealmexam'
+include ':app', ':dbrealmexam', ':jasonparsing', ':weather'
