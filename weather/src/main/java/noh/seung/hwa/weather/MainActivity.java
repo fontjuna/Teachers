@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import noh.seung.hwa.weather.fragments.CurrentWeatherFragment;
 import noh.seung.hwa.weather.fragments.ForecastFragment;
+import noh.seung.hwa.weather.fragments.ForecastFragment2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,15 +44,15 @@ public class MainActivity extends AppCompatActivity {
                     return new CurrentWeatherFragment();
                 case 1:
                     return new ForecastFragment();
-//                case 2:
-//                    return new ForecastFragment2();
+                case 2:
+                    return new ForecastFragment2();
             }
             return null;
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -61,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     return "현재 날씨";
                 case 1:
                     return "리스트뷰";
-//                case 2:
-//                    return "리사이클러뷰";
+                case 2:
+                    return "리사이클러뷰";
             }
             return null;
         }

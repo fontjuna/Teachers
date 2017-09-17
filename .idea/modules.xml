@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dbrealmexam/dbrealmexam.iml" filepath="$PROJECT_DIR$/dbrealmexam/dbrealmexam.iml" />
       <module fileurl="file://$PROJECT_DIR$/jasonparsing/jasonparsing.iml" filepath="$PROJECT_DIR$/jasonparsing/jasonparsing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/map/map.iml" filepath="$PROJECT_DIR$/map/map.iml" />
       <module fileurl="file://$PROJECT_DIR$/weather/weather.iml" filepath="$PROJECT_DIR$/weather/weather.iml" />
     </modules>
   </component>
